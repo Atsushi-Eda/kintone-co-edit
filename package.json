@@ -1,6 +1,6 @@
 {
   "name": "kintone-co-edit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "scripts": {
     "start": "node scripts/npm-start.js",
     "develop": "webpack --mode development --watch",
