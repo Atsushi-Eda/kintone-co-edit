@@ -22,7 +22,6 @@ import {
   saveToTemporaryApp,
   removeFromTemporaryApp,
   getChangesFromTemporaryApp,
-  replaceUndefinedWithEmptyString,
 } from "desktop/functions/util";
 
 ((PLUGIN_ID) => {
@@ -92,8 +91,7 @@ import {
     if (!changeChecker.check(change)) {
       return;
     }
-    const formattedChange = replaceUndefinedWithEmptyString(change);
-    socketManager.change(formattedChange);
-    saveToTemporaryApp(config.temporaryApp, event, formattedChange);
+    socketManager.change(change);
+    saveToTemporaryApp(config.temporaryApp, event, change);
   });
 })(kintone.$PLUGIN_ID);

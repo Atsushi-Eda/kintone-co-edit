@@ -1,8 +1,5 @@
 import type { Change } from "types/change";
-import {
-  alertAndReload,
-  replaceUndefinedWithEmptyString,
-} from "desktop/functions/util";
+import { alertAndReload } from "desktop/functions/util";
 import _ from "lodash";
 
 export class ChangeChecker {
@@ -38,10 +35,7 @@ export class ChangeChecker {
   private isSameChange(change: Change, changeByOthers: Change): boolean {
     return (
       change.code === changeByOthers.code &&
-      _.isEqual(
-        replaceUndefinedWithEmptyString(change).recordField.value,
-        changeByOthers.recordField.value
-      )
+      _.isEqual(change.recordField.value, changeByOthers.recordField.value)
     );
   }
 

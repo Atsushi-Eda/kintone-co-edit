@@ -1,6 +1,7 @@
 import { KintoneRestAPIClient } from "@kintone/rest-api-client";
 import type { KintoneFormFieldProperty } from "@kintone/rest-api-client";
 import type { Change } from "types/change";
+import { replaceUndefinedWithEmptyString } from "desktop/functions/util";
 
 declare type FlatProperty = KintoneFormFieldProperty.OneOf & {
   parent?: string;
@@ -55,11 +56,11 @@ export function changeEvent(
         (event) => {
           callback({
             event,
-            change: {
+            change: replaceUndefinedWithEmptyString({
               code: property.parent || property.code,
               label: properties[property.parent || property.code].label,
               recordField: event.record[property.parent || property.code],
-            },
+            }),
           });
         }
       );
