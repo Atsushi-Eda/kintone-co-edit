@@ -1,0 +1,21 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "type": "APP",
+  "desktop": {
+    "js": ["desktop.js"]
+  },
+  "icon": "icon.png",
+  "config": {
+    "html": "config.html",
+    "js": ["config.js"],
+    "required_params": ["socketUrl", "httpUrl", "temporaryApp"]
+  },
+  "name": {
+    "en": "kintone-co-edit"
+  },
+  "description": {
+    "en": "Enables co editing of kintone record.",
+    "ja": "kintoneレコードの共同編集機能"
+  }
+}

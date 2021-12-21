@@ -1,0 +1,11 @@
+.kintone-co-edit-desktop {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background: rgba(245, 245, 245, 0.5);
+  padding: 1rem;
+}
+.kintone-co-edit-desktop p {
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "target": "es2020",
+    "module": "commonjs",
+    "outDir": "plugin",
+    "rootDir": "src",
+    "baseUrl": "src",
+    "typeRoots": ["src/types"],
+    "strict": true,
+    "esModuleInterop": true,
+    "jsx": "react-jsx"
+  },
+  "files": ["./node_modules/@kintone/dts-gen/kintone.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["plugin", "node_modules"]
+}
